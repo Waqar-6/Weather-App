@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+      integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI="
+      crossorigin=""
+    />
+    <script
+      defer
+      src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+      integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM="
+      crossorigin=""
+    ></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script defer type="module" src="index.js"></script>
+    
+
+    
+
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <nav class="navbar desktop--nav">Navbar</nav>
+      <nav class="mobile-nav">
+        --- 
+        ---
+
+        <ul>
+          <li>Summary</li>
+          <li>highlights</li>
+          <li>Forecast</li>
+          <li>Map</li>
+        </ul>
+      </nav>
+
+      <main class="dashboard">
+        <section class="summary section--container">
+          <form class="summary--form">
+            <input
+              type="text"
+              class="summary--form__input"
+              placeholder="Search..."
+            />
+            <button class="search-btn">search</button>
+          </form>
+
+          <img src="" alt="current weather" class="summary--weather__image" />
+          <p class="summary--weather__temp">28oc</p>
+          <p class="summary--weather__description">Cold</p>
+          <p class="summary--weather__city">London</p>
+          <p class="summary--weather__currentdate">28 juy 2023</p>
+        </section>
+
+        <section class="highlights section--container">
+          <!-- <p class="highlights--heading">Todays highlights</p> -->
+
+          <div class="higlights--top--layer">
+            <div class="highlights--wind sub--higlight-container">
+              <p class="sub--heading">Wind Status</p>
+              <div>
+                <canvas id="wind"></canvas>
+              </div>
+
+              <div class="stats">
+                <p class="highlights--wind__speed">790 MPH</p>
+                <p class="highlights--wind__time">5:00am</p>
+              </div>
+            </div>
+
+            <div class="highlights--uv sub--higlight-container">
+              <p class="sub--heading">UV INDEX</p>
+              <div><canvas id="uv"></canvas></div>
+
+              <div class="stats">
+                <p class="highlights--uv__index">790 MPH</p>
+              </div>
+            </div>
+
+            <div class="highlights--sunrise--sunset sub--higlight-container">
+              <p class="sub--heading">Sunrise & Sunset</p>
+              <div><canvas id="sunrise"></canvas></div>
+
+              <div class="stats">
+                <div>
+                  <p>Sunrise</p>
+                  <p class="highlights--sunrise__time">5:30am</p>
+                </div>
+                <div>
+                  <p>Sunset</p>
+                  <p class="highlights--sunset__time">5:30am</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="highlights--bottom__layer">
+            <div class="highlights--humidity sub--higlight-container">
+              <p>Humidity</p>
+              <div class="stats">
+                <p class="highlights--humidity__temp">84</p>
+                <p class="highlights--humidity__description">
+                  its really humid
+                </p>
+              </div>
+            </div>
+
+            <div class="highlights--visibility sub--higlight-container">
+              <p>Visibility</p>
+              <div class="stats">
+                <p class="highlights--visibility__level">84</p>
+                <p class="highlights--visibility__description">
+                  its really not visible
+                </p>
+              </div>
+            </div>
+
+            <div class="highlights--feels--like sub--higlight-container">
+              <p>Feels Like</p>
+              <div class="stats">
+                <p class="highlights--feels--like__temp">84</p>
+                <p class="highlights--feels--like__description">
+                  it Feels like not cold
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="forecast section--container">
+          <ul class="forecast--list">
+            <li class="forcast--list__day">
+              <img src="" alt="image" class="forcast--list__day__image" />
+              <p class="forcast--list__day--date">28 May</p>
+              <p class="forcast--list__day--dateday">Wednersday</p>
+            </li>
+          </ul>
+        </section>
+
+        <section class="map section--container" id="map"> Map </section>
+      </main>
+    </div>
+
+    
+    
+  </body>
+</html>
